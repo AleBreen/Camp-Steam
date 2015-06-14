@@ -36,21 +36,21 @@ public class Restaurant{
         double iceCreamPrice = 2.00;
         double sodaPrice = 1.50;
 
-        /**
-         *
-         * ENTER YOUR CODE HERE
-         *
-         * HINTS:
-         * printAllowance(allowance); -- prints your current allowance
-         * printMenu(); -- prints all menu items
-         * input = scan.nextInt(); -- stores the number entered by the user in input
-         *
-         * printFailure("Soda"); -- prints "You do not have enough money remaining to purchase Soda"
-         * printFailure("Ice Cream"); -- prints "You do not have enough money remaining to purchase Ice Cream"
-         * printFailure("Pizza"); -- prints "You do not have enough money remaining to purchase Pizza"
-         *
-         */
+        while(true){ /* FIX WHILE CONDITION */
+            printAllowance(allowance);
+            printMenu();
 
+            input = scan.nextInt();
+            /**
+             *
+             * ENTER YOUR CODE HERE
+             *
+             * HINTS:
+             * printFailure("Soda"); -- prints "You do not have enough money remaining to purchase Soda"
+             * printFailure("Ice Cream"); -- prints "You do not have enough money remaining to purchase Ice Cream"
+             * printFailure("Pizza"); -- prints "You do not have enough money remaining to purchase Pizza"
+             *
+             */
         }
 
     }
