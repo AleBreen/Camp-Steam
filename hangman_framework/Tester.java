@@ -16,11 +16,22 @@ public class Tester{
 
         while (true){ /* FIX THIS WHILE LOOP CONDITION */
 
+            int remaining_lives = board.getLives();
+  
+            if(){
+                System.out.println(Hangman.base());
+            } 
+             
             /**
              *
              * ENTER YOUR CODE HERE
+             * NUMBER OF LIVES REMAINING: board.getLives();
+             * System.out.println(Hangman.strikeOne());
+             * System.out.println(Hangman.strikeTwo());
              *
              */
+
+            board.allLettersFilled()
 
             if(!board.getIncorrectGuesses().equals("\n")){
                 System.out.println("Letters Guessed: " + board.getIncorrectGuesses());
@@ -33,6 +44,7 @@ public class Tester{
             input = input.substring(0,1);
 
             correct = board.setMove(input);
+            board.updateNumberOfLives(correct);
 
             if(!correct){
                 lettersGuessed += input + " ";

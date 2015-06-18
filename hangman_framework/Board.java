@@ -37,21 +37,14 @@ public class Board{
         return true;
     }
 
-    public boolean gameOver(){
-        if(allLettersFilled() || lives == 0){
-            return true;
-        }
-        else{
-            return false;
-        }
-
-    }
-
     public int getLives(){
         return this.lives;
     }
 
-    private void updateNumberOfLives(boolean correct){
+    public void updateNumberOfLives(boolean correct){
+        if(correct == false){
+            lives = lives -1;
+        }
 
         /**
          * ENTER CODE FOR UPDATING NUMBER OF LIVES REMAINING
