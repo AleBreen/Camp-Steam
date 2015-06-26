@@ -27,7 +27,7 @@ public class Board{
                 else{  
                     state = State.PERMANENT;
                 }
-                board[i][j] = new Tile(val, state);
+                board[i][j] = new Tile(val, state, counter);
                 ++counter;
             }
         }
@@ -127,6 +127,18 @@ public class Board{
     public Tile getTileAt(int row, int col){
         return this.board[row][col];
     }
+   
+   //THIS METHOD IS INCOMPLETE 
+    public Tile getTileByCounter(int counter){
+        int row=0;
+        int col=0;
+        double d = counter/9;
+        d = Math.floor(d);
+        row = (int)d; 
+       Tile A = getTileAt(row,col);
+       return A;
+    }
+
 
     public void crossOutAt(int row, int col, int val){
         this.board[row][col].crossOut(val);

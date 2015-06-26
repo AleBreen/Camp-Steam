@@ -3,6 +3,7 @@ public class Tile{
     private int value;
     private State state;
     private int [] availableMoves;
+    private int counter;
 
     public Tile(){
         this.availableMoves =  new int [] {1,2,3,4,5,6,7,8,9};
@@ -10,8 +11,9 @@ public class Tile{
         this.state = State.EMPTY;
     }
 
-    public Tile(int value, State state){
+    public Tile(int value, State state, int counter){
         this.value = value;
+        this.counter = counter;
         if (value == 0){
             this.availableMoves =  new int [] {1,2,3,4,5,6,7,8,9};
         }
@@ -23,6 +25,10 @@ public class Tile{
 
     public int [] getAvailableMoves(){
         return this.availableMoves;
+    }
+    
+    public int getCounter(){
+        return this.counter;
     }
 
     public void crossOut(int n){
